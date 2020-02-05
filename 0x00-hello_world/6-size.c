@@ -1,4 +1,7 @@
 #include <stdio.h>
+/*
+ * This program is for print a string
+ */
 int main(void)
 {
 printf("Size of a char: %i byte(s)\n", sizeof(char));
