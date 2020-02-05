@@ -1,6 +1,8 @@
 #include <stdio.h>
-/*
- * This program is for print a string
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
