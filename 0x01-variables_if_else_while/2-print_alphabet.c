@@ -9,7 +9,7 @@ int main(void)
 {
 char letter; /*Decarling statement*/
 
-for (letter = 'a'; letter < = 'z'; letter++)
+for (letter = 'a'; letter <= 'z'; letter++)
 {
 putchar(letter);
 }
