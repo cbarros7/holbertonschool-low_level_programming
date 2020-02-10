@@ -2,7 +2,7 @@
 /**
  * print_sign - return 0 letter not lowercase, 1 letter lowercase
  *
- * Return: 0 not lowercase, 1 lowercase
+ * Return: Returns 1 and prints + if n is greater than zero, Returns 0 and prints 0 if n is zero, Returns -1 and prints - if n is less than zero
  */
 int print_sign(int n)
 {
