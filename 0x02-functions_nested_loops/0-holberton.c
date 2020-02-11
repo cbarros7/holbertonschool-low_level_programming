@@ -3,18 +3,18 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: nothing, return void
  */
 int main (void)
 
 {
-int i;
-char string [9] = "Holberton";
+int i; /*Declaring statements*/
+char string [9] = "Holberton"; /*Arrays*/
 
-for (i=0 ; i < 9 ; i++)
+for (i=0 ; i < 9 ; i++) /*Start for*/
 {
-_putchar(string[i]);
-}
+_putchar(string[i]);/*display word*/
+} /*End for*/
 
 _putchar('\n');
 
