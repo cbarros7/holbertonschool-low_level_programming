@@ -5,7 +5,7 @@
  *
  * Return: nothing, return void
  */
-int main (void)
+int main(void)
 
 {
 int i; /*Declaring statements*/
