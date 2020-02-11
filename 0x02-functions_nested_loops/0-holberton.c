@@ -18,4 +18,6 @@ _putchar(string[i]);/*display word*/
 
 _putchar('\n');
 
+return (0);
+
 }
