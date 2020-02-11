@@ -1,12 +1,11 @@
 #include "holberton.h"
 /**
- * main - Entry point
+ * print_alphabet - print alphabert lowercase
  *
- * Return: Always 0 (Success)
+ * Return: nothing
  */
 
 void print_alphabet(void)
-
 {
 char letter; /*Decarling statement*/
 
