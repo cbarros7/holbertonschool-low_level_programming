@@ -1,15 +1,16 @@
 #include "holberton.h"
 /**
-* positive_or_negative -prints if integer is positive or negative
-*@i: print int
+* main - main
 * Return: 0
 */
 
-void positive_or_negative(int i)
+int main(void)
 {
 
+int i;
 i = 0;
-printf("%i, \n", i);
+
+positive_or_negative(i);
 
 return (0);
 }
