@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - Entry point
+ * print_alphabet - print alphabert x 10
  *
  * Return: Always 0 (Success)
  */
@@ -21,5 +21,7 @@ _putchar(alphabet);
 count++;
 _putchar('\n'); /*new line*/
 } /*end while*/
+
+return (0);
 
 }
