@@ -7,7 +7,6 @@
 
 void positive_or_negative(int i)
 {
-int i;
 
 i = 0;
 printf("%i, \n", i);
