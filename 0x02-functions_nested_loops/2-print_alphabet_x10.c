@@ -1,10 +1,10 @@
 #include "holberton.h"
-/**
- * print_alphabet - print alphabert x 10
- *
- * Return: Always 0 (Success)
- */
 
+/**
+ * print_alphabet_x10 - print alphabet
+ *
+ * Return: always 0
+ */
 void print_alphabet_x10(void)
 {
 int alphabet; /*Declaring statements*/
