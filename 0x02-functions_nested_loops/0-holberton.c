@@ -5,20 +5,17 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int main (void)
+
 {
-_putchar ('H');
-_putchar ('o');
-_putchar ('l');
-_putchar ('b');
-_putchar ('e');
-_putchar ('r');
-_putchar ('t');
-_putchar ('o');
-_putchar ('n');
+int i;
+char string [9] = "Holberton";
 
-_putchar ('\n');
+for (i=0 ; i < 9 ; i++)
+{
+_putchar(string[i]);
+}
 
-return (0);
+_putchar('\n');
 
 }
