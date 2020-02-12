@@ -7,7 +7,6 @@
 void print_times_table(int n)
 {
 int a, b, c; /*Declaring statements*/
-
 for (a = 0; a <= n; a++)/*First for*/
 {
 for (b = 0; b <= n; b++)/*Secondo for*/
