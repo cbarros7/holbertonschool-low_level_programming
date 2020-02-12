@@ -4,7 +4,7 @@ int main()
 /*Declaring statements*/
 int i;
 int n = 50;
-int i num_1 = 1;
+int num_1 = 1;
 int num_2 = 2;
 int nextTerm;
 
