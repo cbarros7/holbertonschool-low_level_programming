@@ -43,5 +43,5 @@ int main(void)
 
 	}
 	printf("\n"); /*New line*/
-
+	return (0);
 }
