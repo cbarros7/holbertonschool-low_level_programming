@@ -12,7 +12,7 @@ int main(void)
 unsigned long num_1, num_2, num_3;
 unsigned long result;
 
-result=0;
+result = 0;
 num_1 = 1;
 num_2 = 2;
 
