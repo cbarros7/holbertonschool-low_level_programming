@@ -17,8 +17,7 @@ c = a * b;/* multiplication a*b*/
 if ((c / 10) == 0)/*If the first digit is 0*/
 {
 if  (b == 0)
-{
-_putchar ('0');
+{ _putchar ('0');
 }
 if (b != 0)/*print if b is different 0*/
 {
@@ -44,8 +43,7 @@ if (b < n) /*don't print the last (;)*/
 _putchar(',');
 _putchar (' ');
 }
-} /*End second FOR*/
-_putchar ('\n');
+} /*End second FOR*/ _putchar ('\n');
 } /*End first FOR*/
 }
 } /*End int main*/
