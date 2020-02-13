@@ -12,10 +12,10 @@ int main(void)
 int i, result; /*Delcaring statements*/
 
 i = 0;
+result = 0;
 /*Start While*/
 while (i < 1024)
 {
-
 if (i % 3 == 0 || i % 5 == 0) /*Start condition IF*/
 result += i;
 i++;
