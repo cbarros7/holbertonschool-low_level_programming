@@ -7,7 +7,7 @@
 void print_diagonal(int n)
 {
 
-	/*Delcaring statements*/
+/*Delcaring statements*/
 	int i;
 	int z;
 
@@ -15,20 +15,17 @@ void print_diagonal(int n)
 	{
 		for (i = 0; i < n; i++) /*Print (_) n times*/
 		{
-			for (z = 0; z < n ; z++)
-			_putchar (' ');
+			for (z = 0; z < i ; z++) /*Print (_) * Second IF*/
+			{
+				_putchar (' ');
+			} /*End second IF*/
 			_putchar (92);
 			_putchar ('\n');
+
 		}
 
 		_putchar ('\n'); /*New line*/
 
 	} /*End IF*/
-
-	else
-	{
-		_putchar ('\n'); /*New line*/
-	}
-
 
 }
