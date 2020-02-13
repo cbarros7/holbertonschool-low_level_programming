@@ -9,13 +9,12 @@
 int main(void)
 {
 /*Declaring statements*/
-long i;
-long n = 50;
+long n;
 long num_1 = 1;
 long num_2 = 2;
 long nextTerm;
 
-for (i = 2; i < n; ++i) /*Start for*/
+for (n = 2; n < 50; ++n) /*Start for*/
 {
 printf("%ld, ", num_1);
 nextTerm = num_1 + num_2;
