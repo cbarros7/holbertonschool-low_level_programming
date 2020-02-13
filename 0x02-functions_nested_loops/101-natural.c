@@ -1,12 +1,10 @@
-
 #include <stdio.h>
-
 /**
  * main - increasing and decreasing until 98
  *
  * Return: Always 0.
- *
  */
+
 int main(void)
 {
 int i, result; /*Delcaring statements*/
@@ -23,3 +21,4 @@ i++;
 
 printf("%d\n", result);
 return (0);
+}
