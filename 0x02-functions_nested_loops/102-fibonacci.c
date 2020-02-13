@@ -20,15 +20,15 @@ nextTerm = num_1 + num_2;
 num_1 = num_2;
 num_2 = nextTerm;
 
-if ( n != 49)
+if (n != 49)
 {
 printf("%ld, ", nextTerm);
 }
 
-else 
+else
 {
 printf("%ld\n", nextTerm);
-} 
+}
 
 } /*End for*/
 
