@@ -17,12 +17,12 @@ void print_square(int size)
 		for (i = 0; i < size; i++) /*Print (_) n times*/
 		{
 
-			for (z = 0; z <= size; z++) /*Start FOR*/
+			for (z = 0; z < size; z++) /*Start FOR*/
 			{
 				_putchar (35);
 			}
-
 			_putchar ('\n');
+
 		} /*END second FOR*/
 
 	} /*End IF*/
