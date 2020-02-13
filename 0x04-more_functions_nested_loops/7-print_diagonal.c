@@ -20,11 +20,9 @@ void print_diagonal(int n)
 				_putchar (' ');
 			} /*End second IF*/
 			_putchar (92);
-			_putchar ('\n');
+			_putchar ('\n'); /*New line*/
 
 		}
-
-		_putchar ('\n'); /*New line*/
 
 	} /*End IF*/
 
