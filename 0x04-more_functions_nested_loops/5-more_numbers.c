@@ -8,28 +8,35 @@
 void more_numbers(void)
 {
 	int i; /*Declaring statements*/
-	int j;
+	int first_num;
+	int second_num;
+	int result;
 
 	i = 0; /*count*/
-	j = 0;
+	result = 0;
 	while (i < 10)/*Start first While*/
 	{
-		while (j <= 14) /*Start secondo While*/
+		while (result <= 14) /*Start secondo While*/
 		{
-			if (j > 9) /*print 0-9*/
+			if (result < 10) /*swap*/
 			{
-				_putchar (((j / 10) + (j % 10)) + '0');
+				second_num = result;
 			}
 
 			else /*print num > 9*/
 			{
-				_putchar (j + '0');
+				first_num = result / 10;
+				second_num = result % 10;
+				_putchar (first_num + '0');
 			}
 
-			j++;
+			_putchar (second_num + '0');
+
+			result++;
 		}
 		i++;
-		j = 0; /*reset count*/
+		result = 0; /*reset count*/
 		_putchar ('\n'); /*new line*/
 	}
+
 }
