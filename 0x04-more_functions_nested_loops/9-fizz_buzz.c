@@ -1,6 +1,11 @@
 #include <stdio.h>
+/**
+ * main - entry point
+ *
+ * Return: void
+ */
 
-int main (void)
+int main(void)
 {
 
 	int n = 100; /*Delcaring statements*/
@@ -10,24 +15,24 @@ int main (void)
 	i = 1;
 	while (i <= n) /*Start While*/
 	{
-		if ( i % 3 == 0 ) //Muitple 3*/
+		if (i % 3 == 0) /*Muitple 3*/
 		{
-			printf ("Fizz ");
+			printf("Fizz ");
 		}
 
-		else if ( i % 5 == 0) /*Multple 5*/
+		else if (i % 5 == 0) /*Multple 5*/
 		{
-			printf ("Buzz ");
+			printf("Buzz ");
 		}
 
 		else
 		{
-			printf ("%i ", i); /*Print i*/
+			printf("%i ", i); /*Print i*/
 		}
 
 		i++;
 
 	}
-	printf ("\n"); /*New line*/
+	printf("\n"); /*New line*/
 
 }
