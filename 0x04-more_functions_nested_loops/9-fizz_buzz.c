@@ -18,7 +18,7 @@ int main(void)
 		{
 			printf("FizzBuzz ");
 		}
-		
+
 		else if (i % 3 == 0) /*Muitple 3*/
 		{
 			printf("Fizz ");
