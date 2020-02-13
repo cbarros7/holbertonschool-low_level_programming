@@ -14,23 +14,31 @@ int main(void)
 	i = 1;
 	while (i <= n) /*Start While*/
 	{
-		if (i % 3 == 0) /*Muitple 3*/
+		if (i % 3 == 0 && i % 5 == 0) /*Multple 3 and 5*/
 		{
-			printf("Fizz");
+			printf("FizzBuzz ");
+		}
+		
+		else if (i % 3 == 0) /*Muitple 3*/
+		{
+			printf("Fizz ");
 		}
 
 		else if (i % 5 == 0) /*Multple 5*/
 		{
-			printf("Buzz");
+			if (i < n)
+			printf("Buzz ");
+
+			else
+				printf("Buzz");
 		}
 
 		else
 		{
-			printf("%i", i); /*Print i*/
+			printf("%i ", i); /*Print i*/
 		}
 
 		i++;
-		printf(" ");
 
 
 	}
