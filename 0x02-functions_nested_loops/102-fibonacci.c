@@ -10,7 +10,7 @@ int main(void)
 {
 /*Declaring statements*/
 long i;
-long n;
+long n = 50;
 long num_1 = 1;
 long num_2 = 2;
 long nextTerm;
