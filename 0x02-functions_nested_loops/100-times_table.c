@@ -7,6 +7,7 @@
 void print_times_table(int n)
 {
 int a, b, c; /*Declaring statements*/
+n = 15;
 for (a = 0; a <= n; a++)/*First for*/
 {
 for (b = 0; b <= n; b++)/*Secondo for*/
@@ -25,7 +26,7 @@ _putchar (' ');
 _putchar ((c % 10) + '0');
 }
 } /*End the first IF*/
-if ((c / 10) <= 9 && ((c % 10) <= 9))/*print to 99*/
+else if ((c / 10) <= 9 && ((c % 10) <= 9))/*print to 99*/
 {
 _putchar (' ');
 _putchar ((c / 10) + '0');
