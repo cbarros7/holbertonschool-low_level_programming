@@ -16,15 +16,21 @@ long int nextTerm;
 
 for (n = 0; n < 50; ++n) /*Start for*/
 {
-printf("%ld, ", num_1);
 nextTerm = num_1 + num_2;
 num_1 = num_2;
 num_2 = nextTerm;
+
+if ( n != 49)
+{
+printf("%ld, ", nextTerm);
+}
+
+else 
+{
+printf("%ld\n", nextTerm);
+} 
+
 } /*End for*/
-
-printf("%ld", num_1);
-
-printf("\n");
 
 return (0);
 }
