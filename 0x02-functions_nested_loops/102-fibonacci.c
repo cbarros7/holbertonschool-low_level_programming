@@ -1,19 +1,31 @@
 #include <stdio.h>
-int main()
+
+/**
+ * main - Entry point
+ *
+ * Return: nothing, return void
+ */
+
+int main(void)
 {
 /*Declaring statements*/
-int i;
-int n = 50;
-int num_1 = 1;
-int num_2 = 2;
-int nextTerm;
+long i;
+long n;
+long num_1 = 1;
+long num_2 = 2;
+long nextTerm;
 
-for (i = 1; i <= n; ++i) /*Start for*/
+for (i = 2; i < n; ++i) /*Start for*/
 {
-printf("%d, ", num_1);
+printf("%ld, ", num_1);
 nextTerm = num_1 + num_2;
 num_1 = num_2;
 num_2 = nextTerm;
 } /*End for*/
-return 0;
+
+printf("%ld", num_1);
+
+printf("\n");
+
+return (0);
 }
