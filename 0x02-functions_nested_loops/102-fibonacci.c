@@ -9,10 +9,10 @@
 int main(void)
 {
 /*Declaring statements*/
-long n;
-long num_1 = 0;
-long num_2 = 1;
-long nextTerm;
+long int n;
+long int num_1 = 0;
+long int num_2 = 1;
+long int nextTerm;
 
 for (n = 0; n < 50; ++n) /*Start for*/
 {
