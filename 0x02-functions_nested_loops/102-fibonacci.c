@@ -10,11 +10,11 @@ int main(void)
 {
 /*Declaring statements*/
 long n;
-long num_1 = 1;
-long num_2 = 2;
+long num_1 = 0;
+long num_2 = 1;
 long nextTerm;
 
-for (n = 2; n < 50; ++n) /*Start for*/
+for (n = 0; n < 50; ++n) /*Start for*/
 {
 printf("%ld, ", num_1);
 nextTerm = num_1 + num_2;
