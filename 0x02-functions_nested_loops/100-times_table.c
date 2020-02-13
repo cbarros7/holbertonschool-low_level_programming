@@ -7,7 +7,8 @@
 void print_times_table(int n)
 {
 int a, b, c; /*Declaring statements*/
-n = 15;
+if (n < 16 && n > -1)
+{
 for (a = 0; a <= n; a++)/*First for*/
 {
 for (b = 0; b <= n; b++)/*Secondo for*/
@@ -46,4 +47,5 @@ _putchar (' ');
 } /*End second FOR*/
 _putchar ('\n');
 } /*End first FOR*/
+}
 } /*End int main*/
