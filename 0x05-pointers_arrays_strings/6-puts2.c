@@ -13,8 +13,8 @@ void puts2(char *str)
 
 	for (i = 0; str[i] != '\0'; i++) /*Star FOR*/
 	{
+		if ( i % 2 == 0)
 		_putchar (str[i]); /*display contents*/
-		i++; /*Incrementing next position*/
 	} /*END FOR*/
 
 	_putchar ('\n');
