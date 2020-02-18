@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 /**
  * rev_string - prints a string rev
  *@s: A pointer to an int that will be updated
@@ -12,8 +11,14 @@ void rev_string(char *s)
 	/*Declcaring variables*/
 	char *start_c, *end_c, c;
 	int i, count;
+	int length = 0;
 
-	count = strlen(s); /*Count each character of string*/
+	for(i = 0; s[i]; i++) /*Count character by character*/
+	{
+		length++;
+	} /*End for*/
+
+	count = length; /*Count each character of string*/
 
 	/*Start_c and end_c is equal value of variable s*/
 	start_c = s;
