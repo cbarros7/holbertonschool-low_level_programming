@@ -8,18 +8,18 @@
 
 void print_rev(char *s)
 {
-int i;
+	int i;
 
-    i = 0;
-    while (s [i] != '\0') /*Count character of string*/
-    {
-        i++;
-    }
-    
-    for (i = i -1 ; i >= 0; i--) /*print charcter by character*/
-    {
-        putchar (s[i]);
-    }
+	i = 0;
+	while (s[i] != '\0') /*Count character of string*/
+	{
+		i++;
+	}
 
-    putchar ('\n');
+	for (i = i - 1 ; i >= 0; i--) /*print charcter by character*/
+	{
+		putchar (s[i]);
+	}
+
+	putchar ('\n');
 }
