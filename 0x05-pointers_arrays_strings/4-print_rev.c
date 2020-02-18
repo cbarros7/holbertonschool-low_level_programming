@@ -26,6 +26,4 @@ void print_rev(char *s)
 			break;
 		}
 	} /*End secondo FOR*/
-
-	_putchar('\n');
 }
