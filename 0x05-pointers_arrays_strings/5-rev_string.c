@@ -13,7 +13,7 @@ void rev_string(char *s)
 	int i, count;
 	int length = 0;
 
-	for(i = 0; s[i]; i++) /*Count character by character*/
+	for (i = 0; s[i]; i++) /*Count character by character*/
 	{
 		length++;
 	} /*End for*/
