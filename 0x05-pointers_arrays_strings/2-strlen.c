@@ -9,17 +9,12 @@
 
 int _strlen(char *s)
 {
-	int length; /*Declaring variables for counter character*/
-	int m;
+	int i;
 
-	length = 0; /*Start 0*/
-
-	for (m = 0; s[m]; m++) /*Count character by character*/
+	i = 0;
+	while (s[i] != '\0') /*Count character of string*/
 	{
-		if (s[m] != ' ') /* != a spaces*/
-		{
-			length++;
-		} /*End IF*/
-	} /*End for*/
-	return (length);
+		i++;
+	}
+	return (i);
 }
