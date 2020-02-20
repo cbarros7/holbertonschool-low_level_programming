@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *__strncat -  concatenates two strings
+ *_strncat -  concatenates two strings
  *@dest: A pointer to an char that will be updated
  *@src: A pointer to an char that will be updated
  *@n: value
