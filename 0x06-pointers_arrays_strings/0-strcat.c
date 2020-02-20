@@ -10,17 +10,6 @@ char *_strcat(char *dest, char *src)
 {
 	int i, j;
 
-	/*Check if is NULL*/
-	if (dest == NULL)
-	{
-		return (NULL);
-	}
-
-	if (src == NULL)
-	{
-		return (dest);
-	}
-
 	i = 0;
 	while (dest[i] != '\0') /*WHILE count character */
 	{
