@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *_memset -   copy number bytes form adress "from" to adress "to"
+ *_memcpy -   copy number bytes form adress "from" to adress "to"
  *@dest: content is to be copied
  *@src: Source of data to be copied
  *@n: bytes of the memory
