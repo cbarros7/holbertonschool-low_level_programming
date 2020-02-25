@@ -7,24 +7,24 @@
  * Return: return 0
  **/
 
-char *_strstr(char *haystack, char *needle)
+char  *_strstr(char *haystack, char *needle)
 {
+	char *str1, *str2; /*Declaring variables*/
 
-	while (*haystack != '\0') /*Declaring WHILE*/
+	while (*haystack != '\0')
 	{
-		if (*haystack == *needle) /*if s ==  c*/
+		str1 = haystack; /*values*/
+		str2 = needle;
+
+		/*Star WHILE*/
+		while (*haystack != '\0' && *str2 != '\0' && *haystack == *str2)
 		{
-			return (haystack); /*return s*/
+			haystack++;
+			str2++;
 		}
-
-		haystack++;
+		if (*str2 == '\0')
+			return (str1);
+		haystack = str1 + 1;
 	}
-
-	if (*haystack == *needle)
-	{
-		return (haystack);
-
-	}
-
-	return (haystack);/* values null*/
+	return (0);
 }
