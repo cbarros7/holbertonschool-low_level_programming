@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *_strlen_recursion - factorial of a given number
+ *factorial - factorial of a given number
  *@n: pointer block of memory to fill
  *Return: factorial
  */
