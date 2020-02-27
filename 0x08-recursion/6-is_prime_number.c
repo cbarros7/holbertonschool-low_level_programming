@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *evaluate - recursion loop
+ *evaluate_num - recursion loop
  *@num: num
  *@iterator: number to iterate
  *Return: return 1 or 0
@@ -32,7 +32,7 @@ int evaluate_num(int num, int iterator)
 
 /**
  *is_prime_number - evaluate prime or not
- *@n: number
+ *@num: number
  *Return: return 1 prime - return 0 otherwise
  */
 
