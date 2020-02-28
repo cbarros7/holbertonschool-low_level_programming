@@ -13,4 +13,4 @@ Write a blog post on C static libraries. It should cover:
     Why use libraries
     How they work
     How to create them
-    How to use them
+    How to use them.
