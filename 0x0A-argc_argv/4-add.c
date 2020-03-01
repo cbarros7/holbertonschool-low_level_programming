@@ -14,7 +14,7 @@ int check_num(char *str)
 
 {
 	/*Declaring variables*/
-	int count;
+	unsigned int count;
 
 	count = 0;
 	while (count < strlen(str)) /*count string*/
@@ -25,16 +25,11 @@ int check_num(char *str)
 			return (0);
 		}
 
-		else
-		{
-			return (1);
-		}
-
 		count++;
 	}
 
+	return (1);
 }
-
 
 /**
  * main - Print the name of the program
@@ -52,9 +47,10 @@ int main(int argc, char *argv[])
 	int str_to_int;
 	int sum = 0;
 
+	(void) argc;
 
 	count = 1;
-	while (argv[count] != '\0') /*Goes through the whole array*/
+	while (*(argv[count]) != '\0') /*Goes through the whole array*/
 	{
 		if (check_num(argv[count]))
 
