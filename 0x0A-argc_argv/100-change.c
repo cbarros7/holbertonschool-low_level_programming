@@ -30,8 +30,10 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	/*Declaring FOR*/
-	for (position = 0; coins[position] != '\0'; position++)
+	/*Declaring WHILE*/
+
+	while (coins[position] != '\0')
+
 	{
 		if (total >= coins[position])
 		{
@@ -39,7 +41,11 @@ int main(int argc, char *argv[])
 			change += aux;
 			total -= coins[position] * aux;
 		}
+
+		position++;
+
 	}
+
 	printf("%d\n", change);
 	return (0);
 }
