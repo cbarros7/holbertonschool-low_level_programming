@@ -27,7 +27,7 @@ int _strlen(char *s)
 
 char *_strcpy(char *dest, char *src)
 {
-	int i = 1;
+	int i = 0;
 
 	while (src[i] != '\0')
 	{
@@ -47,13 +47,16 @@ char *_strcpy(char *dest, char *src)
 
 char *_strdup(char *str)
 {
-
-	char *dst = (char *) malloc((_strlen(str) + 1) * sizeof(char));
-
+	char *dst;
+	unsigned int size;
 	if (str == 0)
 	{
 		return (NULL);
 	}
+
+	size = _strlen(str) + 1;
+
+	dst = (char *) malloc(size * sizeof(char));
 
 	if (dst == 0)
 	{
