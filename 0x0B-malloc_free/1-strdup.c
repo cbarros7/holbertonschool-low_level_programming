@@ -14,6 +14,7 @@ int _strlen(char *s)
 	{
 		i++;
 	}
+
 	return (i);
 }
 
@@ -46,6 +47,11 @@ char *_strcpy(char *dest, char *src)
 
 char *_strdup(char *str)
 {
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	
 	char *dst = (char *) malloc(_strlen(str) + 1);
 
 	if (dst == NULL)
