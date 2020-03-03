@@ -1,19 +1,19 @@
 #include "holberton.h"
 /**
  * free_grid - allocates a grid, make space and free space
- * @gird: takes in width of grid
+ * @grid: takes in width of grid
  * @height: height of grid
- * Return: grid with freed spaces
+ * Return: free grid
  */
 
 void free_grid(int **grid, int height)
 {
-    int i;
+	int i;
 
-    for (i = 0; i < height; i++)
-    {
-        free (grid[i]);
-    }
+	for (i = 0; i < height; i++)
+	{
+		free(grid[i]);
+	}
 
-    free (grid);
+	free(grid);
 }
