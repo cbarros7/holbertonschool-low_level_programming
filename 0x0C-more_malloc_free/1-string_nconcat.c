@@ -27,7 +27,7 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *dst;
-	unsigned int i, j, size, size_1, size_2;
+	unsigned int i, count, j, size, size_1, size_2;
 
 	if (s1 == NULL) /*If the array is empty*/
 		s1 = "";
@@ -46,24 +46,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*Concatenate arrays*/
 	if (n >= size_2)
 	{
-		for (i = 0; *(s1 + i) != '\0'; i++)
-			*(dst + i) = *(s1 + i);
-
-		for (j = 0; *(s2 + j) != '\0'; j++)
-		{
-			*(dst + i) = *(s2 + j);
-			i++;
-		}
+		count = size_2;
 	}
+
 	else
+	{
+		count = n;
+	}
+
 	{
 		for (i = 0; *(s1 + i) != '\0'; i++)
 			*(dst + i) = *(s1 + i);
-		for (j = 0; j < n && *(s2 + j) != '\0'; j++)
+
+		for (j = 0; j < count; j++)
 		{
 			*(dst + i) = *(s2 + j);
 			i++;
 		}
 	}
+
 	return (dst);
 }
