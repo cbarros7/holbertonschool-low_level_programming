@@ -29,22 +29,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *dst;
 	unsigned int i, count, j, size, size_1, size_2;
 
+
+
 	if (s1 == NULL) /*If the array is empty*/
 		s1 = "";
+
 	if (s2 == NULL)
 		s2 = "";
-	/*count size total*/
+
 	size_1 = _strlen(s1);
 	size_2 = _strlen(s2);
-	size = size_1 + size_2 + 1;
-	/*malloc*/
-	dst = (char *) malloc(size * sizeof(char));
-	if (dst == 0)
-	{
-		return (NULL);
-	}
-	/*Concatenate arrays*/
-	if (n >= size_2)
+
+		if (n >= size_2)
 	{
 		count = size_2;
 	}
@@ -53,7 +49,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		count = n;
 	}
+			/*count size total*/
 
+	size = size_1 + count + 1;
+
+	/*malloc*/
+	dst = (char *) malloc(size * sizeof(char));
+	if (dst == 0)
+	{
+		return (NULL);
+	}
+	/*Concatenate arrays*/
 	{
 		for (i = 0; *(s1 + i) != '\0'; i++)
 			*(dst + i) = *(s1 + i);
@@ -63,6 +69,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			*(dst + i) = *(s2 + j);
 			i++;
 		}
+		*(dst + i) = '\0';
 	}
 
 	return (dst);
