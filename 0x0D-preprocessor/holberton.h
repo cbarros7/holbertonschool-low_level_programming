@@ -7,4 +7,4 @@
 #include "3-function_like_macro.h"
 #include "4-sum.h"
 
-#endif //HOLBERTON_s
+#endif //HOLBERTON_H
