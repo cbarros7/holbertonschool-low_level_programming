@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "dog.h"
 
 /**
@@ -19,7 +18,6 @@ void print_dog(struct dog *d)
 
 	else
 		printf("Name: %s\n", d->name);
-
 
 	printf("Age: %f\n", d->age);
 
