@@ -1,38 +1,36 @@
 #include <stdlib.h>
 #include "dog.h"
 
-
 /**
- * arg_copy  -   Make a copy of passed in argument
- *
- * @source:      Data to make copy of
- *
- * Return:       Pointer to memory segment containing copy of argument data
+ * _copy  -   Make a copy of passed in argument
+ * @src:      Data to make copy of
+ * Return:       Pointer
  */
 
-char *arg_copy(char *source)
+char *_copy(char *src)
 {
 	char *ptr;
-	int i = 0, length = 0;
+	int i, len;
 
-	if (source == NULL)
+	if (src == NULL)
 	{
 		return (NULL);
 	}
 
-	for (length = 0; source[length] != '\0'; length++)
+
+	for (len = 0; src[len] != '\0'; len++)
 		;
 
-	ptr = malloc(sizeof(char) * (length + 1));
+	ptr = malloc(sizeof(char) * (len + 1));
 
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; source[i] != '\0'; i++)
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		ptr[i] = source[i];
+		ptr[i] = src[i];
 	}
 
 	ptr[i] = '\0';
@@ -42,14 +40,52 @@ char *arg_copy(char *source)
 
 /**
  * new_dog     - Create a new dog variable
- *
  * @name:        Name of the dog
  * @age:         Age of the dog
  * @owner:       Owner of the dog
- *
  * Return:       Pointer to new dog variable
  */
 
+
+dog_t *new_dog(char *name, float age, char *owner)
+{
+	dog_t *snoopie;
+	char *new_name, *new_owner;
+
+	if (name == NULL || owner == NULL)
+	{
+		return (NULL);
+	}
+
+	snoopie = malloc(sizeof(dog_t));
+	if (snoopie == NULL)
+	{
+		return (NULL);
+	}
+
+	new_name = _copy(name);
+	if (new_name == NULL)
+	{
+		free(snoopie);
+		return (NULL);
+	}
+	snoopie->name = new_name;
+
+	snoopie->age = age;
+
+	new_owner = _copy(owner);
+	if (new_owner == NULL)
+	{
+		free(snoopie->name);
+		free(snoopie);
+		return (NULL);
+	}
+	snoopie->owner = new_owner;
+
+	return (snoopie);
+}
+
+/*
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *puppy;
@@ -66,7 +102,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	name_copy = arg_copy(name);
+	name_copy = _copy(name);
 	if (name_copy == NULL)
 	{
 		free(puppy);
@@ -76,7 +112,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	puppy->age = age;
 
-	owner_copy = arg_copy(owner);
+	owner_copy = _copy(owner);
 	if (owner_copy == NULL)
 	{
 		free(puppy->name);
@@ -87,3 +123,4 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (puppy);
 }
+*/
