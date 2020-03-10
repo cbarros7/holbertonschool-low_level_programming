@@ -18,6 +18,22 @@ unsigned int _strlen(char *str)
 return (i);
 
 }
+/**
+ * _strcpy - copies string
+ * @new_struct: pointer to new string
+ * @old_struct: pointer to string to copy
+ * Return: void#include "dog.h"
+ */
+void _strcpy(char *old_struct, char *new_struct)
+{
+	unsigned int i;
+	unsigned int len_struct;
+
+	len_struct= _strlen(new_struct);
+
+	for (i = 0; i <= len_struct; i++)
+		old_struct[i] = new_struct[i];
+}
 
 /**
  * new_dog - creates new type of struct dog
@@ -44,11 +60,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 			(*snoopie).owner = malloc(sizeof(char) * (size_owner + 1));
 			if ((*snoopie).owner)
 			{
-				(*snoopie).name = name;
-				/*_strcpy((*snoopie).name, name);*/
+				/*(*snoopie).name = name;*/
+				_strcpy((*snoopie).name, name);
 				(*snoopie).age = age;
-				/*_strcpy((*snoopie).owner, owner);*/
-				(*snoopie).owner = owner;
+				_strcpy((*snoopie).owner, owner);
+				/*(*snoopie).owner = owner;*/
 				return (snoopie);
 			}
 			else
