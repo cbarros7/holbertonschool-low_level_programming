@@ -4,7 +4,7 @@
 /**
  * _copy  -   Make a copy of passed in argument
  * @src:      Data to make copy of
- * Return:       Pointer
+ * Return:    Pointer
  */
 
 char *_copy(char *src)
@@ -16,7 +16,6 @@ char *_copy(char *src)
 	{
 		return (NULL);
 	}
-
 
 	for (len = 0; src[len] != '\0'; len++)
 		;
@@ -37,7 +36,6 @@ char *_copy(char *src)
 	return (ptr);
 }
 
-
 /**
  * new_dog     - Create a new dog variable
  * @name:        Name of the dog
@@ -45,7 +43,6 @@ char *_copy(char *src)
  * @owner:       Owner of the dog
  * Return:       Pointer to new dog variable
  */
-
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -69,58 +66,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(snoopie);
 		return (NULL);
 	}
-	snoopie->name = new_name;
+	(*snoopie).name = new_name;
 
-	snoopie->age = age;
+	(*snoopie).age = age;
 
 	new_owner = _copy(owner);
 	if (new_owner == NULL)
 	{
-		free(snoopie->name);
+		free((*snoopie).name);
 		free(snoopie);
 		return (NULL);
 	}
-	snoopie->owner = new_owner;
+	(*snoopie).owner = new_owner;
 
 	return (snoopie);
 }
-
-/*
-dog_t *new_dog(char *name, float age, char *owner)
-{
-	dog_t *puppy;
-	char *name_copy, *owner_copy;
-
-	if (name == NULL || owner == NULL)
-	{
-		return (NULL);
-	}
-
-	puppy = malloc(sizeof(dog_t));
-	if (puppy == NULL)
-	{
-		return (NULL);
-	}
-
-	name_copy = _copy(name);
-	if (name_copy == NULL)
-	{
-		free(puppy);
-		return (NULL);
-	}
-	puppy->name = name_copy;
-
-	puppy->age = age;
-
-	owner_copy = _copy(owner);
-	if (owner_copy == NULL)
-	{
-		free(puppy->name);
-		free(puppy);
-		return (NULL);
-	}
-	puppy->owner = owner_copy;
-
-	return (puppy);
-}
-*/
