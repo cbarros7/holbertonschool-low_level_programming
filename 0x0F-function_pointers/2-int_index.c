@@ -15,23 +15,22 @@ int int_index(int *array, int size, int (*cmp)(int))
 	int i;
 	int count;
 
-	if (array != NULL && cmp != NULL && size > 0)
+	if (array != NULL && cmp != NULL)
 	{
 
-		i = 0;
-		while (i < size)
+		i = 1;
+		while (i <= size)
 		{
 			count = cmp(array[i]);
 			if (count != 0)
+			{
+				return (i);
+			}
 
-				break;
 			i++;
 		}
 
-		return (i);
-
 	}
-
 	return (-1);
 
 }
