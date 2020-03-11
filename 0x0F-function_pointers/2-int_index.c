@@ -7,12 +7,12 @@
  *@size: size of the array
  *@cmp:callback function
  * Return: no element matches -1
- */
+ **/
 
 int int_index(int *array, int size, int (*cmp)(int))
 
 {
-	int i, j;
+	int i;
 	int count = 0;
 
 	if (array != NULL && cmp != NULL)
@@ -24,7 +24,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 		while (i < size)
 		{
 			count = cmp(array[i]);
-			if (count != 0
+			if (count != 0)
 
 				break;
 			i++;
@@ -34,6 +34,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	}
 
-	return (-i);
+	return (-1);
 
 }
