@@ -3,6 +3,12 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * main - Checks for the other codes.
+ * @argv: Vector.
+ * @argc: Counts the arguments.
+ * Return: r.
+ */
 
 int main(int argc, char *argv[])
 {
