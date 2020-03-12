@@ -1,6 +1,10 @@
 #ifndef _3_CALH_H
 #define _3_CALH_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /**
  * struct op - Struct op
  *_
