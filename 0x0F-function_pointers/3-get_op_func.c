@@ -1,12 +1,10 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "3-calc.h"
 
 /**
- * get_op_func - Function for  operation.
- * @s: Operator
- * Return: Null or position in ops
+ * get_op_func - should contain the function that selects the correct
+ * function to perform the operation asked by the use
+ * @s: struct s (int, int)
+ * Return: NULL
  */
 
 int (*get_op_func(char *s))(int, int)
@@ -19,9 +17,8 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
-	i = 0;
 	while (i < 5)
 	{
 		if (ops[i].op[0] == s[0])
