@@ -16,6 +16,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	const char *array = separator;
 
+	/*if (separator == NULL)
+	  printf("%s", nil);*/
+
 	/* access all the arguments assigned to valist */
 	i = 0;
 	while (i < n)
