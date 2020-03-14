@@ -22,19 +22,17 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		result = va_arg(list_num, int);
 
-		if (i < n - 1 && separator != NULL)
+		printf("%d", result);
+		if (i < n - 1 && (separator != NULL))
 		{
-			printf("%d, ", result);
-		}
-
-		else if (separator != NULL)
-		{
-			printf("%d\n", result);
+			printf("%s", separator);
 		}
 
 		i++;
 
 	}
+
+	printf("\n");
 
 	/* clean memory reserved for valist */
 	va_end(list_num);
