@@ -11,7 +11,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list names;
 	unsigned int i;
-	const char *array;
+	const char *str;
 
 	/* initialize valist for num number of arguments */
 	va_start(names, n);
@@ -19,10 +19,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	/* access all the arguments assigned to valist */
 	for (i = 0; i < n; i++)
 	{
-		array = va_arg(names, const char *);
-		if (array != NULL)
+		str = va_arg(names, const char *);
+		if (str != NULL)
 		{
-			printf("%s", array);
+			printf("%s", str);
 			if (i < (n - 1) && separator != NULL)
 				printf("%s", separator);
 		}
