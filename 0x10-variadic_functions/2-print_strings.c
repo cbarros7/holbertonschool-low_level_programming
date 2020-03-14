@@ -20,16 +20,20 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	i = 0;
 	while (i < n)
 	{
-		if (separator == NULL)
-			printf("nill");
-
 		array = va_arg(names, const char *);
 
+		if (array != NULL)
 
-		printf("%s", array);
+		{
+			printf("%s", array);
+			if (i < n - 1 && (separator != NULL))
+				printf("%s", separator);
+		}
+
+		else
+			printf("(nill)");
 		if (i < n - 1 && (separator != NULL))
 			printf("%s", separator);
-
 
 		i++;
 	}
