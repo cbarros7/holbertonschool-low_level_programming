@@ -25,11 +25,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			result = va_arg(list_num, int);
 
 			if (i < n - 1)
-
+			{
 				printf("%d, ", result);
+			}
 
 			else
+			{
 				printf("%d\n", result);
+			}
 
 			i++;
 
