@@ -31,7 +31,7 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
 /*Helper functions*/
-char *strdup(const char *s1);
+char *strdup(const char *s);
 int _strlen(const char *s);
 
 #endif
