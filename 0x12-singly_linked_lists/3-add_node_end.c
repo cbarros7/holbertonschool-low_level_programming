@@ -21,14 +21,14 @@ int _strlen(const char *s)
 }
 
 /**
- * add_node - add new node a beginning of a a list
+ * add_node_end -  adds a new node at the end of a list
  * @head: pointer
  *@str:string
- * Return:  number elements of linked list
+ * Return:  address of the new element
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node, *last_node;
+	list_t *new_node, *last_node = *head;
 	/*Using malloc*/
 	new_node = malloc(sizeof(list_t));
 
@@ -40,7 +40,7 @@ list_t *add_node(list_t **head, const char *str)
 	new_node->next = NULL;
 	new_node->len = _strlen(str);
 
-	if (*head ==NULL)
+	if (*head == NULL)
 	{
 		*head = new_node;
 		return (NULL);
