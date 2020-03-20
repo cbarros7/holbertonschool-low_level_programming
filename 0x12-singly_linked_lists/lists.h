@@ -32,5 +32,6 @@ void free_list(list_t *head);
 
 /*Helper functions*/
 char *strdup(const char *s1);
+int _strlen(const char *s);
 
 #endif
