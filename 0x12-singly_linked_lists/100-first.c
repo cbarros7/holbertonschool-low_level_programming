@@ -1,5 +1,6 @@
+#include <stdio.h>
 #include "lists.h"
-void prin_fun(void)__attribute__ ((constructor));
+
 /**
  * print_fun - print a string
  */
