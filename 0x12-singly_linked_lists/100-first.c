@@ -1,7 +1,7 @@
 #include "lists.h"
+void prin_fun(void)__attribute__ ((constructor));
 /**
  * print_fun - print a string
- * Return: void
  */
 
 void print_fun(void)
