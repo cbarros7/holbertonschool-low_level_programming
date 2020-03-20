@@ -14,9 +14,11 @@ list_t *add_node(list_t **head, const char *str)
 
 	new_node->str = strdup(str); /*Assing data*/
 
-	if (new_node->str == NULL)
+	if (new_node == NULL)
+	{
+		free(new_node);
 		return (NULL);
-
+	}
 
 	new_node->next = *head;
 	new_node->len = (unsigned int)strlen(str);
