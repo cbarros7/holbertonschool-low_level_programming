@@ -17,13 +17,19 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/*Using malloc for list new_node*/
 	new_node = malloc(sizeof(listint_t));
 
+	if (new_node == NULL)
+		return (NULL);
+
 	/*Assign data*/
 	new_node->n = n;
 	new_node->next = NULL;
 
 	/*if it is not possible to add the new node at index idx*/
-	if (idx == 1)
-		return (NULL);
+	/*if (idx == 0)
+	  return (NULL);
+	 */
+
+
 
 	/*WHILE It determines how far it prints the positions*/
 	while (i < (idx - 1))
