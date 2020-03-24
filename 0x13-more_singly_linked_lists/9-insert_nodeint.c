@@ -14,6 +14,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *new_node, *temp = *head;
 	unsigned int i = 0;
 
+	if (head == NULL)
+		return (NULL);
+
 	/*Using malloc for list new_node*/
 	new_node = malloc(sizeof(listint_t));
 
@@ -25,14 +28,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new_node->next = NULL;
 
 	/*WHILE It determines how far it prints the positions*/
-	while (i < (idx - 1))
+	while (i < (idx - 1) && new_node != NULL && idx != 0)
 	{
+		if (temp == NULL)
+			return (NULL);
+
+		if (idx == 0)
+			new_node->next = temp;
+
 		temp = temp->next;
 		i++;
 	}
-
-	if (temp->next == NULL)
-		return (NULL);
 
 	/*Swap*/
 	new_node->next = temp->next;
