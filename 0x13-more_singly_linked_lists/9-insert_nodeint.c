@@ -24,16 +24,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new_node->n = n;
 	new_node->next = NULL;
 
-	/*if it is not possible to add the new node at index idx*/
-	/*if (idx == 0)
-	  return (NULL);
-	 */
-
-
-
 	/*WHILE It determines how far it prints the positions*/
 	while (i < (idx - 1))
 	{
+		/*if it is not possible to add the new node at index idx*/
+		if (temp->next == NULL)
+			return (NULL);
+
 		temp = temp->next;
 		i++;
 	}
