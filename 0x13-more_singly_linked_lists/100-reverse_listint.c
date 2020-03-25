@@ -8,22 +8,23 @@
 listint_t *reverse_listint(listint_t **head)
 {
 	/* new_node traverses the list, head is reset to empty list.*/
-	listint_t *new_node = *head, *next_node;
-	*head = NULL;
+	listint_t *new_node = *head, *next_node = NULL;
+
+	if (*head == NULL)
+		return (NULL);
 
 	/* Until no more in list, insert current before first and advance*/
 	while (new_node != NULL)
 	{
-		/*Changing the next node*/
-		next_node = new_node->next;
+		new_node = (*head)->next;
+		(*head)->next = next_node;
+		next_node = *head;
 
-		/*Insert at start of new list*/
-		new_node->next = *head;
-		*head = new_node;
-
-		/*Advance to next*/
-		new_node = next_node;
+		if (new_node != NULL)
+			*head = new_node;
 	}
 
-	return (next_node);
+
+	next_node = NULL;
+	return (*head);
 }
