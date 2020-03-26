@@ -1,6 +1,6 @@
 
 ## BIT MANIPULATION - HOLBERTON SCHOOL
-__ Carlos Barros 
+_Carlos Barros_ 
 
 **Task #0** Write a function that converts a binary number to an unsigned int.
 
