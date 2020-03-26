@@ -17,8 +17,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 /*Helper functions*/
 
-int is_numerical(unsigned int n);
-int _atoi(const char *s);
-unsigned int convert_num (const char *b);
 
 #endif
