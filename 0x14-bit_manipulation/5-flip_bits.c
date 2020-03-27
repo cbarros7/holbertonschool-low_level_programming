@@ -11,7 +11,8 @@ int count_bits(int n)
 
 	while (n)
 	{
-		count += n & 1;
+		if ((n & 1) == 1)
+			count++;
 		n >>= 1; /*is the same n = n >>1*/
 	}
 	return (count);
