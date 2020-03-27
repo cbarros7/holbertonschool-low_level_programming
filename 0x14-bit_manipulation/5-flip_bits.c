@@ -5,11 +5,11 @@
  * @n: number to count
  * Return: variable count
  */
-int count_bits(int n)
+unsigned int count_bits(unsigned int n)
 {
-	int count = 0;
+	unsigned int count = 0;
 
-	while (n)
+	while (n > 0)
 	{
 		if ((n & 1) == 1)
 			count++;
