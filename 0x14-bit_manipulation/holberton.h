@@ -18,7 +18,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m);
 /*Helper functions*/
 void print_num_binary(unsigned long int n);
 int _putchar(char c);
-int count_bits(int n);
+unsigned int count_bits(unsigned int n);
 
 
 #endif
