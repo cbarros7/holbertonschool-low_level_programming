@@ -9,7 +9,7 @@ int count_bits(int n)
 {
 	int count = 0;
 
-	while i(n)
+	while (n)
 	{
 		count += n & 1;
 		n >>= 1; /*is the same n = n >>1*/
