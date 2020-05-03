@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - delete the node at index of a doubly linked list
+ * delete_dnodeint_at_index - delete the node at index of a doubly linked list
  * @head: double pointer
  * @index : index of the node that should be deleted
  * Return: 1 if it succeeded, -1 if it failed

@@ -28,8 +28,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new_data;
 		return (*h);
 	}
-
-        /*WHILE It determines how far it prints the positions*/
+/*WHILE It determines how far it prints the positions*/
 	while (i < (idx - 1))
 	{
 		new_node = new_node->next;
