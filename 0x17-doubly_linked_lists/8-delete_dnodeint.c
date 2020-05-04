@@ -8,36 +8,26 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	/*Declaring list and variables*/
-	dlistint_t *start = *head, *temp;
-	unsigned int i = 0;
+	dlistint_t *tmp_del, *tmp_head;
 
-	/*If there's nothing in the head*/
-	if (*head == NULL)
+	if (!head || !*head)
 		return (-1);
-
-	if (index == 0) /*if index is unique position*/
+	tmp_head = *head;
+	if (index == 0)
 	{
-		*head = start->next;
-		free(start);
+		*head = (*head)->next;
+		(*head)->prev = NULL;
+		free(tmp_head);
 		return (1);
 	}
-
-	while (start != NULL && i < (index - 1))
-	{
-		start = start->next; /*linked list*/
-		i++;
-	}
-
-	/*Check positions current and next*/
-	if (start == NULL || start->next == NULL)
+	for ( ; index > 1 && tmp_head && tmp_head->next; index--)
+		tmp_head = tmp_head->next;
+	if (!tmp_head->next)
 		return (-1);
-
-	/*Delete node at position (next of index -1)*/
-	temp = start->next;
-	start->next = temp->next;
-
-	free(temp);
-
+	tmp_del = tmp_head->next;
+	tmp_head->next = tmp_del->next ? tmp_del->next : NULL;
+	if (tmp_del->next)
+		tmp_del->next->prev = tmp_head;
+	free(tmp_del);
 	return (1);
 }
