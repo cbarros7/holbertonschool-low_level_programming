@@ -22,7 +22,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	if (*head == NULL)
 	{
 		*head = new_data;
-		return (*head);
+		return (new_data);
 	}
 	/*advance position*/
 	while (last_node->next != NULL)
@@ -37,5 +37,5 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	new_data->next = NULL;
 	new_data->prev = last_node;
 
-	return (*head);
+	return (new_data);
 }
