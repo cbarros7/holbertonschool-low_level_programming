@@ -12,6 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	hash_node_t *new_node, *ptr;
 	char *new_value;
+
 	if (key == NULL || value == NULL)
 		return (0);
 	/* Gives you the index of a key*/
@@ -37,12 +38,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new_node->value = strdup(value); /*Copy value*/
 		if (new_node->value == NULL)
 			return (0);
+		new_node->next = ht->array[index];
+		ht->array[index] = new_node;
 	}
-
 	else
 	{
-		/*Copy value*/
-		new_value = strdup(value);
+		new_value = strdup(value); /*Copy value*/
 		if (new_value == NULL)
 			return (0);
 		ptr->value = new_value;
