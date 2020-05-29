@@ -20,18 +20,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	ptr = ht->array[index];
 	while (ptr != NULL)
 	{
-		/*Compare values*/
-		if (strcmp(ptr->key, key) == 0)
+		if (strcmp(ptr->key, key) == 0) /*Compare values*/
 			break;
 		ptr = ptr->next;
 	}
 	if (ptr == NULL)
 	{
 		new_node = malloc(sizeof(hash_node_t));
-		/*Handle errors*/
-		if (new_node == NULL)
+		if (new_node == NULL) /*Handle errors*/
 			return (0);
-
 		new_node->key = strdup(key); /*Copy key*/
 		if (new_node->key == NULL)
 			return (0);
@@ -46,7 +43,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new_value = strdup(value); /*Copy value*/
 		if (new_value == NULL)
 			return (0);
-        free(ptr->value);
+		free(ptr->value);
 		ptr->value = new_value;
 	}
 	return (1);
