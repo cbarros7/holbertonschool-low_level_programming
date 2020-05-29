@@ -10,24 +10,19 @@
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	hash_node_t *ptr;
+	hash_node_t *node;
 	unsigned long int index;
 
-	if (ht == NULL || ht->size == 0 || key == NULL || *key == 0)
+	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
 
-	index = hash_djb2((const unsigned char *) key);
-	index %= ht->size;
-	ptr = ht->array[index];
-
-	while (ptr != NULL)
-	{
-		if (strcmp(ptr->key, key) == 0)
-			break;
-	}
-
-	if (ptr == NULL)
+	index = key_index((const unsigned char *)key, ht->size);
+	if (index >= ht->size)
 		return (NULL);
 
-	return (strdup(ptr->value));
+	node = ht->array[index];
+	while (node && strcmp(node->key, key) != 0)
+		node = node->next;
+
+	return ((node == NULL) ? NULL : node->value);
 }
