@@ -5,7 +5,7 @@ NAME = holberton
 RM = rm -f
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(SRC) -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
@@ -13,9 +13,6 @@ clean:
 oclean:
 	$(RM) $(OBJ)
 
-fclean:
-	clean oclean
+fclean: clean oclean
 
-re:
-	oclean all
-
+re: oclean all
